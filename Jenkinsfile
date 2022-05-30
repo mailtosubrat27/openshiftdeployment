@@ -22,7 +22,7 @@ pipeline {
 
           
           openshift.withCluster() { 
-              openshift.withProject("swapnaramesh-dev") {
+              openshift.withProject("sahuopen-dev") {
   
                     def buildConfigExists = openshift.selector("bc", "codelikethewind_1").exists() 
     
@@ -44,7 +44,7 @@ pipeline {
 
           
           openshift.withCluster() { 
-              openshift.withProject("swapnaramesh-dev") { 
+              openshift.withProject("sahuopen-dev") { 
                              def deployment = openshift.selector("dc", "codelikethewind_1") 
 
                             if(!deployment.exists()){ 
