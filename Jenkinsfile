@@ -27,8 +27,8 @@ pipeline {
                     def buildConfigExists = openshift.selector("bc", "codelikethewind_1").exists() 
     
                     if(!buildConfigExists){ 
-                      //openshift.newBuild("--name=codelikethewind_1", "--docker-image=registry.redhat.io/jboss-eap-7/eap74-openjdk8-openshift-rhel7", "--binary") 
-                      openshift.newBuild("--name=codelikethewind_1", "--docker-image= redhat-openjdk18-openshift", "--binary") 
+                      openshift.newBuild("--name=codelikethewind_1", "--docker-image=registry.redhat.io/jboss-eap-7/eap74-openjdk8-openshift-rhel7", "--binary") 
+//                       openshift.newBuild("--name=codelikethewind_1", "--docker-image= redhat-openjdk18-openshift", "--binary") 
                      
                      } 
     
